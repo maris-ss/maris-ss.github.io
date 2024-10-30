@@ -1,0 +1,335 @@
+.widgets-box {
+    padding: 2rem;
+}
+.widgets {
+    width: 100%;
+    height: 38vh;
+    background: var(--color-bg-widgets);
+    overflow: hidden;
+    grid-area: widgets;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    transition: height 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.widgets.hidden {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+}
+
+.widget-header {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+
+    & .bxs-info-circle {
+        font-size: 2.3rem;
+        cursor: pointer;
+    }
+
+    & .bx-show {
+        font-size: 3rem;
+    }
+}
+
+.widget-text {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+
+    & h3{
+        color: var(--color-light);
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+
+    & p {
+
+       color: var( --color-light-grey);
+       font-weight: 400;
+       font-size: 1.5rem;
+
+    }
+}
+
+.widget-icones {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    & img {
+        width: 4.5rem;
+        padding: 10px;
+    }
+
+    & button {
+        background-color: var(--color-bg-widgets);
+        border: none;
+        cursor: pointer;
+        font-size: 3rem;
+        color: var(--color-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#widgets-grid {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.widget-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-1 {
+    border: 1px dashed var(--color-light);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: auto;
+    margin: 1rem 0;
+    & img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.card-2 {
+    background: var(--color-widgets);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+    padding: 12px;
+}
+
+
+.chart1-text {
+    width: 90%;
+    margin-top: 10px;
+    padding-left: 10px;
+
+    & p {
+        color:var( --color-light-grey);
+        font-size: .6rem;
+        font-weight: 500;
+    }
+
+    & h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+
+.chart1-line{
+
+    width: 100%;
+    height: 1px;
+    margin-top: 8px;
+    background-color: var(--color-grey);
+}
+
+.chart-container1 {
+
+    width: 90%;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.card-3 {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+
+.widget {
+    background: var(--color-bg-dark);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: var(--color-light);
+    display: flex;
+    cursor: grab;
+    padding: 10px;
+    user-select: none;
+
+    & img {
+        width: 5px;
+    }
+
+    & h5 {
+        font-weight: 200;
+        font-size: 1rem;
+    }
+
+    & p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    & span {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+}
+
+.widget-items {
+    background: var(--color-widgets);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color:var(--color-light);
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+    padding: 10px;
+
+}
+
+.widget-big {
+    background: var(--color-widgets);
+    border-radius: 10px;
+    width: 100%;
+    height: 28rem;
+    color: var(--color-light);
+    cursor: grab;
+    padding: 10px;
+    grid-column: 1 / -1;
+}
+
+.card-4 {
+    background: var(--color-widgets);
+    border-radius: 10px;
+    width: 20rem;
+    height: 19rem;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    cursor: grab;
+    padding: 4px 2px 4px 2px;
+
+}
+
+.chart2-text {
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    & p {
+
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--color-light);
+    }
+
+    & span {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+}
+
+.chart2-line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-grey);
+}
+
+.chart-container2 {
+    width: 90%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.bx-plus{
+font-size: 2.5rem;
+border: 1px dashed var(--color-light);
+border-radius: 50%;
+padding: .5rem;
+cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+#myButton{
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+.widgets.collapsed {
+    height: 10vh;
+}
+
+@media (min-width: 900px) {
+    .widgets {
+        height: 55vh;
+    }
+}
+
+
+@media (min-width: 1045px) {
+    .widgets {
+        height: 55vh;
+    }
+    .widgets.collapsed {
+        height: 15vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .widgets {
+        height: 51vh;
+    }
+
+    #widgets-grid {
+        height: 40vh;
+    }
+
+    .widget-cards{
+       height: 35vh;
+    }
+
+    .card-4{
+        width: 15vh;
+     }
+}
+

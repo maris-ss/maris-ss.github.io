@@ -1,0 +1,19 @@
+.faq-btn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: var(--color-bg-dark);
+    color: var(--color-light);
+    bottom: 40px;
+    right: 50px;
+    box-shadow: var(--light-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bx-question-mark {
+    font-size: 2.5rem;
+}

@@ -1,0 +1,54 @@
+.shepherd-element {
+    background-color: #7f90a8;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px !important;
+
+}
+
+.shepherd-header {
+    background: #D4D0D0 !important; 
+    border-radius: 20px !important;
+    font-size: .9rem !important;
+
+}
+
+.shepherd-content {
+    padding: .5rem !important;
+    color: white !important;
+    background: #D4D0D0;
+    border-radius: 20px !important;
+}
+
+.shepherd-button {
+    background-color: #031926 !important;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 8px !important;
+    cursor: pointer;
+}
+
+.shepherd-button:hover {
+    background-color: #425166 !important;
+}
+
+.shepherd-cancel-icon {
+    color: #031926 !important;
+    font-size: 18px;
+}
+  
+.shepherd-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.shepherd-title {
+    color: #031926 !important;
+    font-weight: bold !important;
+    font-size: 1.7rem !important;
+}
+
+.shepherd-text {
+    color: #031926 !important;
+    font-weight: normal !important;
+    font-size: 1.4rem !important;
+}  

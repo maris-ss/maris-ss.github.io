@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIC</title>
+
+    <link rel="shortcut icon" type="image/png" href="./img/cic logo de novo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbY2q90Q4/KxQUHnhHq156+zO405zKVQJ9QSuQ1S7V4Tvwuu3EQb0+NqL+hLpUo9QtMjhM="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/barra-naveg.css">
+    <link rel="stylesheet" href="./css/nome.css">
+    <link rel="stylesheet" href="./css/widgets.css">
+    <link rel="stylesheet" href="./css/botoes-filtros.css">
+    <link rel="stylesheet" href="./css/dados-credito-debito.css">
+    <link rel="stylesheet" href="./css/pizza.css">
+    <link rel="stylesheet" href="./css/comparativo.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/popups.css">
+    <link rel="stylesheet" href="./css/faq.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./css/tour.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js/dist/css/shepherd.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sidebar" id="section5">
+        <div class="logo-img">
+            <img src="./img/cic logo de novo.png" alt="logo cic" class="logo-img">
+        </div>
+        <ul class="d-flex flex-column  align-items-center w-100">
+            <li class="d-flex">
+                <a href="./index.html">
+                    <i class='bx bxs-pie-chart-alt-2'></i>
+                    <span id="span" class="nav-item">Dashboard</span>
+                </a>
+                <div class="span tooltip">Dashboard</div>
+            </li>
+            <li>
+                <a href="./widget.html">
+                    <i class='bx bxs-customize'></i>
+                    <span id="span" class="nav-item">Widgets</span>
+                </a>
+                <div class="span tooltip">Widgets</div>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-git-branch'></i>
+                    <span id="span" class="nav-item">Controle</span>
+                </a>
+                <div class="span tooltip">Controle</div>
+            </li>
+            <li>
+                <a href="./analise.html">
+                    <i class='bx bxs-badge-check'></i>
+                    <span id="span" class="nav-item">Análise</span>
+                </a>
+                <div class="span tooltip">Análise</div>
+            </li>
+            <li>
+                <a href="./upload.html">
+                    <i class='bx bx-upload'></i>
+                    <span id="span" class="nav-item">Uploads</span>
+                </a>
+                <div class="span tooltip">Uploads</div>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span id="span" class="nav-item">Configurações</span>
+                </a>
+                <div class="span tooltip">Configurações</div>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-group'></i>
+                    <span id="span" class="nav-item">Corporação</span>
+                </a>
+                <div class="span tooltip">Corporação</div>
+            </li>
+        </ul>
+        <i class='bx bx-right-arrow-alt' id="btn-sidebar"></i>
+    </div>
+
+    <div class="container">
+        <div class="nav-bar">
+            <nav>
+
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search">
+                    <i class='bx bx-search'></i>
+                </div>
+
+                <div class="user">
+                    <img src="./img/WhatsApp Image 2024-09-02 at 11.34.01.jpeg" alt="foto do usuario" class="user-pic"
+                        onclick="toggleSubMenu()">
+                    <div class="text-container">
+                        <h3>Mariana Sorato</h3>
+                        <p>Colaboradora</p>
+                    </div>
+
+                    <img src="./icones/light_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="" id="icon-theme">
+                    <i class='bx bx-bell' id="notificacao" onclick="toggleNotificationMenu()"></i>
+                </div>
+
+                <div class="icon-noti-wrap" id="iconNotiWrap">
+                    <div class="icon-noti">
+                        <div class="icon-noti-item">
+                            <img src="./icones/error_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.png" alt="Ícone">
+                            <h3>Uma divergência foi detectada em Análise</h3>
+                        </div>
+
+                        <div class="icon-noti-item">
+                            <img src="./icones/check_circle_24dp_75FB4C_FILL0_wght400_GRAD0_opsz24.png" alt="Ícone">
+                            <h3>Divergencia concluída</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="./img/WhatsApp Image 2024-09-02 at 11.34.01.jpeg" alt="foto do usuario">
+                            <h2>Mariana Sorato</h2>
+                            <p>Colaboradora</p>
+                        </div>
+
+
+                        <div class="user-work">
+
+                            <a href="#" class="sub-menu-link">
+                                <i class='bx bx-briefcase-alt'></i>
+                                <p>Simplydesign</p>
+                            </a>
+
+                            <a href="#" class="sub-menu-link">
+                                <i class='bx bx-envelope'  ></i>
+                                <p>marisorato@gmail.com</p>
+                            </a>
+
+                        </div>
+
+                        <a href="#" class="sub-menu-link">
+                            <i class='bx bxs-cog'></i>
+                            <p>Configurações & Privacidade</p>
+                        </a>
+
+                        <a href="#" class="sub-menu-link">
+                            <i class='bx bx-exit'></i>
+                            <p>Logout</p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </nav>
+
+        </div>
+
+        <section class="conteudo">
+
+            <div class="nome">
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="widgets-box">
+                <div class="widgets" id="section1">
+
+                    <div class="widget-header">
+                        <div class="widget-text">
+                            <h3>Widgets</h3>
+                            <p>Arraste e solte os gráficos de sua preferência</p>
+                        </div>
+                        <div class="widget-icones">
+                            <button id="myButton">
+                                <i class='bx bx-show'></i>
+                            </button>
+                            <i class='bx bxs-info-circle' data-category="info"></i>
+                        </div>
+                    </div>
+
+                    <div id="myWidgets" class="myWidgets">
+                        <div id="widgets-grid">
+                            <div class="widget-cards" draggable="false">
+                                <div class="card-1">
+                                    <a href="./widget.html"> <i class='bx bx-plus'></i></a>
+                                </div>
+                            </div>
+
+                            <div class="widget-cards" draggable="true">
+                                <div class="card-2">
+                                    <div class="chart1-text">
+                                        <p>Primary Text</p>
+                                        <h2>Secondary text</h2>
+                                    </div>
+                                    <div class="chart1-line"></div>
+                                    <div class="chart-container1">
+                                        <canvas id="widgetChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget-cards">
+                                <div class="card-3">
+                                    <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                                        <div class="widget-items">
+                                            <h5>R$ <span>3,7</span> mil</h5>
+                                            <p>Créditos</p>
+                                        </div>
+                                        <i class='bx bx-expand' data-category="widgets"></i>
+                                    </div>
+                                    <div class="widget" draggable="true"><img src="./icones/retangulo azul.png" alt="">
+                                        <div class="widget-items">
+                                            <h5>R$ <span>14,5</span> mil</h5>
+                                            <p>Juros</p>
+                                        </div>
+                                        <i class='bx bx-expand' data-category="widgets2"></i>
+                                    </div>
+                                    <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                                        <div class="widget-items">
+                                            <h5>R$ <span>24,8</span> mil</h5>
+                                            <p>Imposto</p>
+                                        </div>
+                                        <i class='bx bx-expand' data-category="widgets"></i>
+                                    </div>
+                                    <div class="widget" draggable="true"><img src="./icones/retangulo azul.png" alt="">
+                                        <div class="widget-items">
+                                            <h5>R$ <span>2,9</span> mil</h5>
+                                            <p>Multas</p>
+                                        </div>
+                                        <i class='bx bx-expand' data-category="widgets2"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="widget-cards" draggable="true">
+                                <div class="card-4">
+                                    <div class="chart2-text">
+                                        <p>Créditos por imposto</p>
+                                        <span>26.000,00</span>
+                                    </div>
+                                    <div class="chart2-line"></div>
+                                    <div class="chart-container2">
+                                        <canvas id="pieChartGreen" class="pie-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botoes">
+                <div class="botao-export">
+                    <i class='bx bx-export'></i>
+                    <h5>Exportar</h5>
+                </div>
+                <span class="material-symbols-outlined" id="pin-icon">keep</span>
+            </div>
+
+            <div class="filtros" id="section2">
+
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZNJREFUSEvtlEtKw1AUhv+TtIoLEBQstiDiwA1UqNUFOHEb1QRMH4oTZ5LWq/Sh2xDcQH2AOhcRQWoFB4I4E8TS5kjaRGJNQkpbR2aYc+7/nTdhyB8NWR9/D9BypSrAS/1lRqdCV5ZNjV8ZaLki9yfeeS10ta3tCbAdeoXZAfoBGgDCaMpRIdaeegFoWmUaoVYdQEPo6qhXBicAVgA8ykyL+bzyHASSzZamWsTnAGIMHO/r6qorYH2rND5itB3ngkKc4gTcfUqULO8qr64A82cHgkuAZwDUZaaEVyaW+AWAKEAPDQkLtrgnwDRkMocThtS86jxEXTJC8UIh9eIsV7e4ZMiJbh/fRfMT+GlzD8A3AzvSjW0RoWbI7IlZgluhK/OmTcsV7wHMAqjJTEmvEgY6Fel0OcayUXMukD3vMlPEb9ICAayI2xtuL1D3QnmN8j/gu2QDLVF682CJWao6ezIwABHOmJG0BK+Frsb9blXPTbbE3gDe+xgLV452Uu+DAWSLNyBMBhW2oYEzCHKy3XyGDvgC4s7RGaPYCzMAAAAASUVORK5CYII="/>
+                <div class="calendar-icon">
+                    <input type="date" id="date-picker">
+                </div>
+
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Filtro por Unidade</option>
+                    <option value="1">Selecionar Tudo</option>
+                    <option value="2">Padrão</option>
+                </select>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Filtro por Grupo</option>
+                    <option value="1">Selecionar Tudo</option>
+                    <option value="2">Padrão</option>
+                </select>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Filtro por Crédito</option>
+                    <option value="1">Selecionar Tudo</option>
+                    <option value="2">COFINS - Mercado Interno</option>
+                    <option value="3">COFINS - Ressarcimento/Compensação</option>
+                    <option value="4">COFINS - Juros sobre o Capital Próprio</option>
+                </select>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Filtro por CNPJ do Crédito
+                    </option>
+                    <option value="1">Selecionar Tudo</option>
+                    <option value="2">04.154.099/0001-37</option>
+                </select>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Filtro por Grupo Tributo
+                    </option>
+                    <option value="1">Selecionar Tudo</option>
+                    <option value="2">IRPJ</option>
+                </select>
+            </div>
+
+            <div class="creditos-debitos-box" id="section3">
+                <div class="drag-box">
+                    <div class="dados-header">
+                        <div class="dados-text">
+                            <div class="dados-title">
+                                <h3>Dados de Créditos</h3>
+                                <i class='bx bxs-info-circle' data-category="info"></i>
+                            </div>
+                            <p>Resumo de Créditos</p>
+                        </div>
+
+                    </div>
+                    <div class="left" id="left">
+                        <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                            <div class="widget-items">
+                                <span>4</span>
+                                <p>Pedidos de Crédito</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>20,0</span> mil</h5>
+                                <p>Crédito Original Inicial</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>2,5</span> mil</h5>
+                                <p>Saldo de Crédito Atualizado</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>18,5</span> mil</h5>
+                                <p>Crédito Original Ultilizado</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>7,5</span>mil</h5>
+                                <p>Liquidação de crédito</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo roxo.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>24,5</span> mil</h5>
+                                <p>Valor de Reserva</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets"></i>
+                        </div>
+                    </div>
+
+                    <div class="widget-big" draggable="true">
+                        <div class="chart-text">
+                            <p>Créditos por imposto</p>
+                            <span>26.000,00</span>
+                        </div>
+                        <div class="chart-line"></div>
+                        <div class="chart-container">
+                            <canvas id="pieChartPurple" class="pie-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="drag-box">
+
+                    <div class="dados-header">
+                        <div class="dados-text">
+                            <div class="dados-title">
+                                <h3>Dados de Débitos</h3>
+                                <i class='bx bxs-info-circle' data-category="info"></i>
+                            </div>
+                            <p>Resumo de Débitos</p>
+                        </div>
+                    </div>
+
+                    <div class="right" id="right">
+                        <div class="widget" draggable="true"><img src="./icones/retangulo azul.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>3,6</span> mil</h5>
+                                <p>Multas</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets2"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo azul.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>53,7</span> mil</h5>
+                                <p>Multa Isolada e Juros</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets2"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo azul.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>23,2</span> mil</h5>
+                                <p>Débitos Compensados</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets2"></i>
+                        </div>
+
+                        <div class="widget" draggable="true"><img src="./icones/retangulo azul.png" alt="">
+                            <div class="widget-items">
+                                <h5>R$ <span>4,6</span> mil</h5>
+                                <p>Contigência Atualizada</p>
+                            </div>
+                            <i class='bx bx-expand' data-category="widgets2"></i>
+                        </div>
+                    </div>
+
+                    <div class="widget-big" draggable="true">
+                        <div class="chart-text">
+                            <p>Débitos por imposto</p>
+                            <span>35.500,00</span>
+                        </div>
+                        <div class="chart-line"></div>
+
+                        <div class="chart-container">
+                            <canvas id="pieChartBlue" class="pie-chart"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup">
+                <div class="overlay"></div>
+                <div class="popup-content">
+
+                    <div class="popup-icons">
+                        <i class='bx bx-check-shield'></i>
+                        <i class='bx bx-collapse close-btn'></i>
+                    </div>
+
+                    <div class="popup-title">
+                        <img src="./icones/retangulo roxo.png" alt="">
+                        <h4>Pedidos de Crédito</h4>
+                    </div>
+
+                    <p>Pedidos de crédito são solicitações feitas a instituições financeiras para obter um empréstimo.</p>
+                    <p> A análise envolve a capacidade de pagamento e histórico financeiro do solicitante. A aprovação depende da avaliação de risco e das políticas da instituição.
+                    </p>
+
+                    <div class="popup-img">
+                        <img src="./icones/popup-img-roxo1.png" alt="">
+                        <img src="./icones/popup-img-roxo2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup4">
+                <div class="overlay"></div>
+                <div class="popup-content">
+
+                    <div class="popup-icons">
+                        <i class='bx bx-check-shield'></i>
+                        <i class='bx bx-collapse close-btn'></i>
+                    </div>
+
+                    <div class="popup-title">
+                        <img src="./icones/retangulo azul.png" alt="">
+                        <h4>Multas</h4>
+                    </div>
+
+                    <p>Multas financeiras são penalidades aplicadas a indivíduos ou empresas por descumprirem obrigações financeiras.</p>
+                    <p>Elas garantem que as partes envolvidas cumpram seus compromissos de forma adequada e dentro dos prazos estabelecidos.</p>
+
+                    <div class="popup-img">
+                        <img src="./icones/popup-img-roxo1.png" alt="">
+                        <img src="./icones/popup-img-roxo2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup2">
+                <div class="overlay"></div>
+                <div class="popup-content">
+
+                    <div class="popup-icons">
+                        <i class='bx bxs-info-circle'></i>
+                        <i class='bx bx-x-circle close-btn'></i>
+                    </div>
+
+                    <h4>Dados de Créditos</h4>
+
+                    <h5>Informação sobre os dados</h5>
+                    <p class="texto1">Dados de crédito mostram seu histórico financeiro, como dívidas e pagamentos. Eles ajudam a avaliar se você pode receber crédito.</p>
+                    <p class="texto2">Bancos usam esses dados para aprovar empréstimos. Um bom histórico facilita o acesso a melhores condições.</p>
+                </div>
+            </div>
+
+            <div class="popup" id="popup3">
+                <div class="overlay"></div>
+                <div class="popup-content">
+
+                    <div class="popup-icons">
+                        <h3>Dúvidas frequentes</h3>
+                        <i class='bx bx-x-circle close-btn'></i>
+                    </div>
+
+                    <div class="sobre-faq">
+                        <div class="sobre1">
+                            <div class="sobre-top">
+                                <i class='bx bx-desktop'></i>
+                                <h4>Sobre o site</h4>
+                            </div>
+
+                            <div class="faq">
+
+                                <div class="question">
+                                    <h5>Como editar o dashboard?</h5>
+                                    <svg width="10" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round">
+                                    </svg>
+                                </div>
+
+                                <div class="answer">
+                                    <p>
+                                        Como editar o dashboard? 
+                                        Para editar o dashboard, arraste os widgets para o local desejado e fixe-os, se quiser, clicando no ícone de fixar à direita.
+                                    </p>
+                                </div>
+
+                            </div>
+                            
+                            <div class="faq">
+                                <div class="question">
+                                    <h5>Como resolver uma divergência?</h5>
+                                    <svg width="10" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round">
+                                    </svg>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        Para resolver a divergência, basta acessar as notificações no menu superior, onde será indicado se algo está errado, permitindo que você tome as ações necessárias para corrigir o problema. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq">
+                                <div class="question">
+                                    <h5>Como editar os Widgets?</h5>
+                                    <svg width="10" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round">
+                                    </svg>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        Para editar os widgets, basta você clicar no sinal de "+" que aparece ao lado deles. Ao fazer isso, as opções de edição estarão disponíveis, permitindo que você personalize os widgets conforme deseja.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sobre2">
+                            <div class="sobre-top">
+                                <i class='bx bx-dollar-circle'></i>
+                                <h4>Sobre finanças</h4>
+                            </div>
+                            <div class="faq">
+                                <div class="question">
+                                    <h5>O que é um PER/COMP?</h5>
+                                    <svg width="10" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round">
+                                    </svg>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        O PER/COMP é um documento para solicitar a devolução de impostos pagos a mais ou errados, ou para usar créditos tributários em dívidas de impostos federais.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq">
+                                <div class="question">
+                                    <h5>O que são compensações?</h5>
+                                    <svg width="10" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round">
+                                    </svg>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        É o processo que permite ao contribuinte usar créditos tributários para abater ou quitar dívidas de outros tributos.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq">
+                                <div class="question">
+                                    <h5>O que é e-CAC?</h5>
+                                    <svg width="10" height="10" viewBox="0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
+                                            stroke-linecap="round">
+                                    </svg>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        O e-CAC é uma plataforma online da Receita Federal que oferece serviços fiscais, como consulta de situação fiscal, envio de documentos e geração de guias de pagamento.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="comparativo-box">
+                <div class="comparativo" id="section4">
+                    <div class="comparativo-header">
+                        <div class="comparativo-text">
+                            <div class="comparativo-title">
+                                <h3>Comparativo Créditos x Débitos</h3>
+                                <i class='bx bxs-info-circle' data-category="info"></i>
+                            </div>
+                            <p>Gráfico de comparativo créditos e débitos</p>
+                        </div>
+                    </div>
+                    <div class="comparativo-items">
+                        <div class="chart3-text">
+                            <p>Créditos x Débitos</p>
+                            <span>-9.500,00</span>
+                            <p>Total</p>
+                        </div>
+                        <div class="chart3-line"></div>
+                        <div class="chart-container3">
+                            <canvas id="analiseCharts"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-btn" id="section6">
+                <i class='bx bx-question-mark' data-category="fac"></i>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="./js/side-bar.js"></script>
+    <script src="./js/menu-usuario.js"></script>
+    <script src="./js/light-dark-mode.js"></script>
+    <script src="./js/drag-and-drop.js"></script>
+    <script src="./js/graficos-pizza.js"></script>
+    <script src="./js/graficos-widget.js"></script>
+    <script src="./js/grafico-comparativo.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/widgets.js"></script>
+    <script src="./js/tour.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js/dist/js/shepherd.min.js"></script>
+
+    <script src="./js/novopopup.js"></script>
+
+</body>
+
+</html>

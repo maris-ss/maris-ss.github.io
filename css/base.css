@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg-dark: #031926;
+    --color-light-blue:#93B7EF;
+    --color-blue:#0263F7;
+    --color-mid-blue:#134797;
+    --color-blue-dark:#425166;
+    --color-light-pink:#E5A9E9;
+    --color-pink:#E32FF0;
+    --color-mid-pink:#8E0F97;
+     --color-dark-pink:#501554;
+    --color-green:#10A957;
+    --color-light-green:#3AD98A;
+    --color-grey:#425166;
+    --color-mid-grey:#425166;
+    --color-light-grey:  #9297B6;
+    --color-light:#FFFFFF;
+    --color-red:#F20D0D;
+    --color-blue-mid: #031926;
+    --gradient-dark-grey: rgba(115, 119, 145, 1);  
+    --light-shadow: 0 0.5rem 0.8rem rgba(199, 196, 196, 0.2);
+    --dark-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    --color-bg-widgets: #425166;
+    --color-widgets: #031926; 
+    --color-pop:#425166;
+    --color-icone:#E32FF0;
+    --color-icon-mid:#dcd6ab;
+    --color-grey-light:#031926;
+    --color-botao:#134797;
+}
+
+.dark-theme{
+    --color-mid-blue:#fffaf0;
+    --color-blue-dark:#165BAA;
+    --color-bg-dark: #fffaf0;
+    --color-grey:#355688;
+    --color-light:#000000;
+    --color-bg-widgets: #93B7EF;
+    --color-light-grey:  #535669;
+    --color-widgets: #fffaf0; 
+    --color-mid-grey:#D4D0D0;
+    --color-pop: #fffaf0;
+    --light-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    --dark-shadow:0 0.5rem 0.8rem rgba(199, 196, 196, 0.2);
+    --color-icone:#93B7EF;
+    --color-icon-mid:#355688;
+    --color-grey-light:#D4D0D0;
+    --color-red:#f92f2f;
+    --color-botao:#165BAA;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-light);
+    background-color: var(--color-bg-dark);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conteudo {
+    width: 85%;
+    min-height: 80vh;
+    max-width: 200rem;
+    margin-top: 10rem;
+    margin-left: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+

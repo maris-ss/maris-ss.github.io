@@ -1,0 +1,124 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 6%;
+    width: 80px;
+    background-color:var( --color-grey);
+    transition: all 0.5s ease;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 2;
+}
+
+.logo-img {
+    width: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 1rem;
+}
+
+.sidebar.active .logo-img {
+    display: flex;
+    margin: 1rem 1.3rem; 
+}
+
+.sidebar.active~.main-content {
+    width: calc(100% - 250px);
+}
+
+.sidebar.active {
+    width: 250px;
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+
+}
+
+.sidebar #btn-sidebar {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    line-height: 5rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.sidebar.active #btn-sidebar {
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 90%;
+    width: 80%;
+    margin: 1rem auto; 
+    line-height: 5rem;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.9rem;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.sidebar:not(.active) ul li  {
+    justify-content: center;
+}
+
+.sidebar:not(.active) i  {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.sidebar ul li a:hover {
+    background-color: var(--color-bg-dark);
+    color: var(--color-light);
+}
+
+
+.sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 135px;
+    top: 25px;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--dark-shadow);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+  
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+    background: var(--color-bg-dark);
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+    opacity: 0;
+} 

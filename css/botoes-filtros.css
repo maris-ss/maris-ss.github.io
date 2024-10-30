@@ -1,0 +1,115 @@
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cursor {
+
+    cursor: pointer;
+}
+
+.botao-export {
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 8px;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.filtros {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.form-select {
+    width: 19rem;
+    background-color: var(--color-bg-dark);
+    border: 1px solid var(--gradient-dark-grey);
+    border-radius: 20px;
+    padding: 6px;
+    color: var(--gradient-dark-grey);
+    font-size: 1.3rem;
+    outline: none;
+    cursor: pointer;
+    margin: 0 0.4rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuNDI4NTggNS43MTQzTDcuOTk5OTggMTAuMjg1N0wxMi41NzE0IDUuNzE0MyIgc3Ryb2tlPSIjNzM3NzkxIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=") no-repeat;
+    background-position-y: 50%;
+    background-position-x: 96%;
+}
+
+.calendar-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: var(--gradient-dark-grey);
+    margin-right: 1rem;
+}
+
+.calendar-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.calendar-icon input[type="date"] {
+    font-size: 0;
+    border: none;
+    line-height: 0;
+    background: rgba(0, 0, 0, 0);
+}
+
+.calendar-icon input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQwXzIpIj4KPHBhdGggZD0iTTMuOTM3NSAwQzQuMDg2NjggMCA0LjIyOTc2IDAuMDU5MjYzMiA0LjMzNTI1IDAuMTY0NzUyQzQuNDQwNzQgMC4yNzAyNDIgNC41IDAuNDEzMzE2IDQuNSAwLjU2MjVWMS4xMjVIMTMuNVYwLjU2MjVDMTMuNSAwLjQxMzMxNiAxMy41NTkzIDAuMjcwMjQyIDEzLjY2NDggMC4xNjQ3NTJDMTMuNzcwMiAwLjA1OTI2MzIgMTMuOTEzMyAwIDE0LjA2MjUgMEMxNC4yMTE3IDAgMTQuMzU0OCAwLjA1OTI2MzIgMTQuNDYwMiAwLjE2NDc1MkMxNC41NjU3IDAuMjcwMjQyIDE0LjYyNSAwLjQxMzMxNiAxNC42MjUgMC41NjI1VjEuMTI1SDE1Ljc1QzE2LjM0NjcgMS4xMjUgMTYuOTE5IDEuMzYyMDUgMTcuMzQxIDEuNzg0MDFDMTcuNzYyOSAyLjIwNTk3IDE4IDIuNzc4MjYgMTggMy4zNzVWMTUuNzVDMTggMTYuMzQ2NyAxNy43NjI5IDE2LjkxOSAxNy4zNDEgMTcuMzQxQzE2LjkxOSAxNy43NjI5IDE2LjM0NjcgMTggMTUuNzUgMThIMi4yNUMxLjY1MzI2IDE4IDEuMDgwOTcgMTcuNzYyOSAwLjY1OTAxIDE3LjM0MUMwLjIzNzA1MyAxNi45MTkgMCAxNi4zNDY3IDAgMTUuNzVWMy4zNzVDMCAyLjc3ODI2IDAuMjM3MDUzIDIuMjA1OTcgMC42NTkwMSAxLjc4NDAxQzEuMDgwOTcgMS4zNjIwNSAxLjY1MzI2IDEuMTI1IDIuMjUgMS4xMjVIMy4zNzVWMC41NjI1QzMuMzc1IDAuNDEzMzE2IDMuNDM0MjYgMC4yNzAyNDIgMy41Mzk3NSAwLjE2NDc1MkMzLjY0NTI0IDAuMDU5MjYzMiAzLjc4ODMyIDAgMy45Mzc1IDBaTTE2LjMxMjUgNC41SDEuMTI1VjE0LjYyNUMxLjEyNSAxNC45MjM0IDEuMjQzNTMgMTUuMjA5NSAxLjQ1NDUgMTUuNDIwNUMxLjY2NTQ4IDE1LjYzMTUgMS45NTE2MyAxNS43NSAyLjI1IDE1Ljc1SDE1Ljc1QzE2LjA0ODQgMTUuNzUgMTYuMzM0NSAxNS42MzE1IDE2LjU0NTUgMTUuNDIwNUMxNi43NTY1IDE1LjIwOTUgMTYuODc1IDE0LjkyMzQgMTYuODc1IDE0LjYyNVY0LjVIMTYuMzEyNVpNMTIuOTM3NSA0LjVWMi4yNUgxMS44MTI1VjQuNUgxMi45Mzc1Wk01LjYyNSA0LjVWMi4yNUg0LjVWNC41SDUuNjI1WiIgZmlsbD0iIzczNzc5MSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzQwXzIiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==") no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    .botoes {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .botoes {
+        margin-right: 2rem;
+    }
+
+    .filtros {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .botao-export {
+        padding: 8px 10px;
+        font-size: 1.4rem;
+    }
+
+    .material-symbols-outlined {
+        font-size: 2.4rem;
+    }
+
+
+}
